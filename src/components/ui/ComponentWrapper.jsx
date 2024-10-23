@@ -24,8 +24,8 @@ import { Box, ThemeProvider, Typography } from "@mui/material";
       >
         <Box
           sx={{
-            width: 400,
-            height: 400,
+            width: 700,
+            height: 500,
             borderRadius: 1,
             bgcolor: "primary.main",
             "&:hover": {
