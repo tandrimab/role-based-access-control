@@ -13,6 +13,8 @@ import { About } from "./components/ui/About";
 import { ErrorBoundary } from "./components/ui/ErrorBoundary";
 import { UserContextProvider } from "./components/store/UserContextProvider";
 import { Login } from "./components/ui/Login";
+import { ProtectedRoute } from "./components/ui/ProtectedRoute";
+import { Profile } from "./components/ui/Profile";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +22,14 @@ const router = createBrowserRouter(
       <Route path="" element={<Home />} />
       <Route path="login" element={<Login />} />
       <Route path="about" element={<About />} />
+      <Route
+        path="profile"
+        element={
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        }
+      />
     </Route>
   )
 );
