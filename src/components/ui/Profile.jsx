@@ -1,16 +1,7 @@
 import React, { useContext } from "react";
-import { Box, ThemeProvider, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import UserContext from "../store/UserContext";
 import ComponentWrapper from "./ComponentWrapper";
-
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
 
 export const Profile = () => {
   const { user } = useContext(UserContext);
