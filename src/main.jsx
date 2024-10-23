@@ -12,11 +12,13 @@ import { Home } from "./components/ui/Home";
 import { About } from "./components/ui/About";
 import { ErrorBoundary } from "./components/ui/ErrorBoundary";
 import { UserContextProvider } from "./components/store/UserContextProvider";
+import { Login } from "./components/ui/Login";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />} errorElement={<ErrorBoundary />}>
       <Route path="" element={<Home />} />
+      <Route path="login" element={<Login />} />
       <Route path="about" element={<About />} />
     </Route>
   )
