@@ -15,6 +15,7 @@ import { UserContextProvider } from "./components/store/UserContextProvider";
 import { Login } from "./components/ui/Login";
 import { ProtectedRoute } from "./components/ui/ProtectedRoute";
 import { Profile } from "./components/ui/Profile";
+import { Admin } from "./components/ui/Admin";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +28,14 @@ const router = createBrowserRouter(
         element={
           <ProtectedRoute>
             <Profile />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="admin"
+        element={
+          <ProtectedRoute>
+            <Admin />
           </ProtectedRoute>
         }
       />
